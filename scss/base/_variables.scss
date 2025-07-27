@@ -1,0 +1,39 @@
+$primary-color: #4a90e2;
+$secondary-color: #f05a28;
+$text-color: #333;
+$bg-color: #fff;
+$font-family: 'Roboto', sans-serif;
+
+.btn {
+  display: inline-block;
+  font-family: $font-family;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+
+  &--primary {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color:#4a90e2;
+    }
+  }
+
+  &--secondary {
+    background-color: #f05a28;
+    color: #fff;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: #f05a28;
+    }
+  }
+}

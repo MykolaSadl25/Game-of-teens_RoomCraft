@@ -1,0 +1,21 @@
+.cta {
+  padding: 3rem 0;
+  background-color: #f05a28;
+  color: #fff;
+  text-align: center;
+
+  &__container {
+    max-width: 700px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 900;
+    }
+  }
+
+  .btn--secondary {
+    font-size: 1.125rem;
+  }
+}

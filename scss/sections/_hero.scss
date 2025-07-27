@@ -1,0 +1,24 @@
+.hero {
+  padding: 12rem 0;
+  text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url("/img/hero-bcg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    font-size: 1.1rem;
+  }
+}

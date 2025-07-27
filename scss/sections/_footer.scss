@@ -1,0 +1,95 @@
+.footer {
+  background-color: #222;
+  color: #eee;
+  padding: 3rem 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__info {
+    flex: 1 1 300px;
+
+    .footer__logo-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+
+      .footer__logo-img {
+        width: 140px;
+        height: auto;
+      }
+    }
+
+    .footer__desc {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #bbb;
+    }
+  }
+
+  &__nav {
+    flex: 1 1 300px;
+
+    .footer__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer__item {
+      a.footer__link {
+        color: #eee;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus {
+          color: #4a90e2;
+        }
+      }
+    }
+  }
+
+  &__social {
+    flex: 1 1 150px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .footer__elem {
+      a.footer__social-link {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        color: #eee;
+
+        svg.footer__icon {
+          width: 100%;
+          height: 100%;
+          fill: #fff;
+          transition: fill 0.3s ease;
+        }
+
+        &:hover,
+        &:focus {
+          color: #4a90e2;
+          svg.footer__icon {
+            fill: #4a90e2;
+          }
+        }
+      }
+    }
+  }
+}
