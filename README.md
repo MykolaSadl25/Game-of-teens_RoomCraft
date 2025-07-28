@@ -1,55 +1,72 @@
-# Game-of-teens_RoomCraft
-Game of teens 2025.Creating a website where you can plan your room.Made with Sviatoslav Fedosiuk
+<p align="right">
+  🇬🇧 <a href="README.en.md">English version</a>
+</p>
 
-## Mykola Sadlii
+
+
 # 🛋️ RoomCraft – Game of Teens
 
-**RoomCraft** is a collaborative web project created by a team of students as part of the **Game of Teens** initiative. It's a sleek and responsive website that allows users to plan and explore room interior ideas with style and interactivity.
+**RoomCraft** — це  вебпроект, створений у рамках ініціативи **Game of Teens 2025**. Це стильний та адаптивний сайт, що дозволяє користувачам планувати інтер'єр кімнати в інтерактивному форматі.  
+Проєкт створений Миколою Садлієм.
 
-## 🌟 Features
+---
 
-- 🖼️ Beautiful and modern UI with clean design
-- 📱 Responsive layout for mobile, tablet, and desktop
-- 🔧 Interactive room planner (WIP or planned)
-- 📦 Modular SCSS structure
-- ⚡ Smooth animations with AOS & Animate.css
-- 🔍 SVG icons and reusable components
-- 🧭 Navigation with mobile burger menu
-- 🧠 Clean and organized HTML/CSS/JS
+### 🌟 Основні функції
 
-## 🚀 Technologies Used
+- 🖼️ Сучасний інтерфейс з мінімалістичним дизайном  
+- 📱 Адаптивна верстка для мобільних пристроїв, планшетів та комп'ютерів  
+- 🔧 Інтерактивний планувальник кімнати (реалізовано)  
+- 📦 Модульна SCSS-структура  
+- ⚡ Анімації за допомогою AOS та Animate.css  
+- 🔍 SVG-іконки та багаторазові компоненти  
+- 🧭 Зручне мобільне меню  
+- 🧠 Чистий, організований HTML/CSS/JS-код  
 
-- **HTML5** – semantic and accessible markup  
-- **SCSS** – modular styles with nesting and variables  
-- **JavaScript** – interactivity and DOM manipulation  
-- **AOS (Animate On Scroll)** – scroll animations  
-- **Animate.css** – extra visual animations  
-- **SVG Sprite** – optimized icon usage  
-- **Modern Normalize** – consistent default styles
+---
 
-## 📂 Project Structure
+### 🚀 Використані технології
 
-**📁 Game-of-teens_RoomCraft**
+- **HTML5** – семантична та доступна розмітка  
+- **SCSS** – модульні стилі з використанням змінних  
+- **JavaScript** – логіка взаємодії та drag-and-drop  
+- **AOS (Animate On Scroll)** – анімації при прокручуванні  
+- **Animate.css** – ефекти з’явлення  
+- **SVG Sprite** – ефективна робота з іконками  
+- **Modern Normalize** – уніфіковані стилі браузерів  
 
-├── 📁 **img → images and svg sprite**
+---
 
-├── 📁 **pages → about, contact, planner, catalog**
+### 📂 Структура проєкту
 
-├── 📁 **style**
+📁 Game-of-teens_RoomCraft/
 
-│ ├── **main.scss → main SCSS entry**
+├── 📁 **img/ # зображення та SVG-спрайт**
 
-│ ├── **_header.scss → header styles**
+├── 📁 **pages/ # about, contact, planner, catalog**
 
-│ ├── **_footer.scss → footer styles**
+├── 📁 **style/ # всі SCSS-стилі**
 
-│ └── **_contact.scss → contact page styles**
+│ ├── **main.scss # головний SCSS-файл**
 
-├── 📄 **index.html**
+│ ├── **_header.scss # стилі хедера**
 
-├── 📄 **script.js**
+│ ├── **_footer.scss # стилі футера**
 
-└── 📄 **README.md**
+│ └── **_contact.scss # стилі сторінки контактів**
 
-## 📄 License
-This project is for educational use only. Not for commercial redistribution
+├── **index.html**
+
+├── **script.js**
+
+└── **README.md**
+
+
+---
+
+### 📌 Майбутні плани
+
+- 💾 Збереження/завантаження макету кімнати
+- 🖱️ Зміна розмірів меблів при плануванні
+
+---
+
