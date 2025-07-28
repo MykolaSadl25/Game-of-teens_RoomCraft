@@ -49,6 +49,35 @@
             </li>
           </ul>
         </nav>
+        <button class="burger" data-mobile-open>
+          <svg class="burger__icon">
+            <use href="../img/symbol-defs.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <div class="mobile is-hidden" data-mobile>
+          <button class="mobile__close" data-mobile-close><svg class="mobile__icon">
+            <use href="../img/symbol-defs.svg#icon-cross"></use>
+          </svg></button>
+          <nav class="mobile__nav">
+            <ul class="mobile__list">
+              <li>
+                <a href="../index.html" class="mobile__link">Home</a>
+              </li>
+              <li>
+                <a href="./about.html" class="mobile__link">About</a>
+              </li>
+              <li>
+                <a href="./planner.html" class="mobile__link">Planner</a>
+              </li>
+              <li>
+                <a href="./catalog.html" class="mobile__link">Catalog</a>
+              </li>
+              <li>
+                <a href="./contact.html" class="mobile__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -133,26 +162,27 @@
 <ul class="footer__social">
     <li class="footer__elem"><a href="https://facebook.com" target="_blank" class="footer__social-link">
         <svg class="footer__icon">
-            <use href="./img/symbol-defs.svg#icon-facebook"></use>
+            <use href="../img/symbol-defs.svg#icon-facebook"></use>
         </svg>
       </a></li>
     <li class="footer__elem">
         <a href="https://twitter.com" target="_blank" class="footer__social-link">
         <svg class="footer__icon">
-            <use href="./img/symbol-defs.svg#icon-twitter"></use>
+            <use href="../img/symbol-defs.svg#icon-twitter"></use>
         </svg>
       </a>
     </li>
     <li class="footer__elem">
         <a href="https://instagram.com" target="_blank" class="footer__social-link">
         <svg class="footer__icon">
-            <use href="./img/symbol-defs.svg#icon-instagram"></use>
+            <use href="../img/symbol-defs.svg#icon-instagram"></use>
         </svg>
       </a>
     </li>
 </ul>
   </div>
 </footer>
+<script src="../js/mobile.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

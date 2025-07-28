@@ -3,7 +3,15 @@
 @use "./base/container";
 @use "./base/variables";
 @use "./sections/header";
+@use "./sections/mobile";
 @use "./sections/hero";
 @use "./sections/features";
 @use "./sections/cta";
+@use "./sections/hero-contact";
+@use "./sections/contact";
+@use "./sections/about";
+@use "./sections/mission";
+@use "./sections/future";
+@use "./sections/team";
+@use "./sections/planner";
 @use "./sections/footer";

@@ -41,10 +41,10 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .container {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row;
+      align-items: center;
     }
 
     &__list {
@@ -53,5 +53,37 @@
       width: 100%;
       margin-top: 1rem;
     }
+  }
+}
+
+// MOBILE/TABLET ONLY
+.burger {
+  display: flex;
+  border: none;
+  width: 100px;
+  height: 100px;
+background-color: transparent;
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+}
+
+.mobile {
+  display: flex;
+
+  @media (min-width: 768px) {
+    display: none ;
+  }
+}
+
+// DESKTOP ONLY
+.header__nav {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 40px;
+    align-items: center;
   }
 }

@@ -1,83 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RoomCraft</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="../style/main.min.css">
-</head>
-<body>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/main.min.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-            <a href="../index.html" class="header__logo"><img src="../img/logo.png" alt="Logo" class="header__img"></a>
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__item"><a href="../index.html" class="header__link">Home</a></li>
-                    <li class="header__item"><a href="./about.html" class="header__link">About</a></li>
-                    <li class="header__item"><a href="./planner.html" class="header__link">Planner</a></li>
-                    <li class="header__item"><a href="./catalog.html" class="header__link">Catalog</a></li>
-                    <li class="header__item"><a href="./contact.html" class="header__link">Contact</a></li>
-                </ul>
-            </nav>
+      <div class="container">
+        <a href="../index.html" class="header__logo"
+          ><img src="../img/logo.png" alt="Logo" class="header__img"
+        /></a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="../index.html" class="header__link">Home</a>
+            </li>
+            <li class="header__item">
+              <a href="./about.html" class="header__link">About</a>
+            </li>
+            <li class="header__item">
+              <a href="./planner.html" class="header__link">Planner</a>
+            </li>
+            <li class="header__item">
+              <a href="./catalog.html" class="header__link">Catalog</a>
+            </li>
+            <li class="header__item">
+              <a href="./contact.html" class="header__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="burger" data-mobile-open>
+          <svg class="burger__icon">
+            <use href="../img/symbol-defs.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <div class="mobile is-hidden" data-mobile>
+          <button class="mobile__close" data-mobile-close><svg class="mobile__icon">
+            <use href="../img/symbol-defs.svg#icon-cross"></use>
+          </svg></button>
+          <nav class="mobile__nav">
+            <ul class="mobile__list">
+              <li>
+                <a href="../index.html" class="mobile__link">Home</a>
+              </li>
+              <li>
+                <a href="./about.html" class="mobile__link">About</a>
+              </li>
+              <li>
+                <a href="./planner.html" class="mobile__link">Planner</a>
+              </li>
+              <li>
+                <a href="./catalog.html" class="mobile__link">Catalog</a>
+              </li>
+              <li>
+                <a href="./contact.html" class="mobile__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </header>
-    <main></main>
+    <main>
+      <section class="hero-contact">
+        <div class="container">
+          <h1 class="hero-contact__title">Have a question - contact us</h1>
+          <p class="hero-contact__text">
+            Our 24 hour support team is ready to help you any time
+          </p>
+        </div>
+      </section>
+      <section class="contact">
+        <form class="contact__form">
+          <label class="contact__label"
+            >Name
+            <input
+              class="contact__input"
+              type="text"
+              required
+              placeholder="Lena Voss"
+            />
+          </label>
+          <label class="contact__label"
+            >Phone Number
+            <input
+              class="contact__input"
+              type="tel"
+              required
+              placeholder="+380123456789"
+            />
+          </label>
+          <label class="contact__label"
+            >Email
+            <input
+              class="contact__input"
+              type="email"
+              required
+              placeholder="example@email.com"
+            />
+          </label>
+          <label class="contact__label"
+            >Comment
+            <textarea
+              class="contact__comment"
+              placeholder="Enter text"
+            ></textarea>
+          </label>
+          <div class="contact__box">
+            <button type="submit" class="contact__btn">Send</button>
+          </div>
+        </form>
+        <ul class="contact__list">
+          <li class="contact__item"><a href="mailto:contact@yourwebsite.com" class="contact__link">Email: contact@yourwebsite.com</a></li>
+          <li class="contact__item"><a href="tel:+123 456 789" class="contact__link">Phone: +123 456 789</a></li>
+        </ul>
+      </section>
+    </main>
     <footer class="footer">
-  <div class="container footer__container">
-    <div class="footer__info">
-      <a href="../index.html" class="footer__logo-link">
-        <img src="../img/logo.png" alt="RoomCraft Logo" class="footer__logo-img" />
-      </a>
-      <p class="footer__desc">
-        RoomCraft © 2025. All rights reserved.<br />
-        Designed with ❤️ by the RoomCraft team.
-      </p>
-    </div>
+      <div class="container footer__container">
+        <div class="footer__info">
+          <a href="../index.html" class="footer__logo-link">
+            <img
+              src="../img/logo.png"
+              alt="RoomCraft Logo"
+              class="footer__logo-img"
+            />
+          </a>
+          <p class="footer__desc">
+            RoomCraft © 2025. All rights reserved.<br />
+            Designed with ❤️ by the RoomCraft team.
+          </p>
+        </div>
 
-    <nav class="footer__nav">
-      <ul class="footer__list">
-        <li class="footer__item"><a href="../index.html" class="footer__link">Home</a></li>
-        <li class="footer__item"><a href="./about.html" class="footer__link">About</a></li>
-        <li class="footer__item"><a href="./planner.html" class="footer__link">Planner</a></li>
-        <li class="footer__item"><a href="./catalog.html" class="footer__link">Catalog</a></li>
-        <li class="footer__item"><a href="./contact.html" class="footer__link">Contact</a></li>
-      </ul>
-    </nav>
-<ul class="footer__social">
-    <li class="footer__elem"><a href="https://facebook.com" target="_blank" class="footer__social-link">
-        <svg class="footer__icon">
-            <use href="./img/symbol-defs.svg#icon-facebook"></use>
-        </svg>
-      </a></li>
-    <li class="footer__elem">
-        <a href="https://twitter.com" target="_blank" class="footer__social-link">
-        <svg class="footer__icon">
-            <use href="./img/symbol-defs.svg#icon-twitter"></use>
-        </svg>
-      </a>
-    </li>
-    <li class="footer__elem">
-        <a href="https://instagram.com" target="_blank" class="footer__social-link">
-        <svg class="footer__icon">
-            <use href="./img/symbol-defs.svg#icon-instagram"></use>
-        </svg>
-      </a>
-    </li>
-</ul>
-  </div>
-</footer>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="../index.html" class="footer__link">Home</a>
+            </li>
+            <li class="footer__item">
+              <a href="./about.html" class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+              <a href="./planner.html" class="footer__link">Planner</a>
+            </li>
+            <li class="footer__item">
+              <a href="./catalog.html" class="footer__link">Catalog</a>
+            </li>
+            <li class="footer__item">
+              <a href="./contact.html" class="footer__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__social">
+          <li class="footer__elem">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="footer__social-link"
+            >
+              <svg class="footer__icon">
+                <use href="../img/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__elem">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              class="footer__social-link"
+            >
+              <svg class="footer__icon">
+                <use href="../img/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__elem">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="footer__social-link"
+            >
+              <svg class="footer__icon">
+                <use href="../img/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../js/mobile.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-  AOS.init();
-</script>
-</body>
+      AOS.init();
+    </script>
+  </body>
 </html>
