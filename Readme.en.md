@@ -1,5 +1,5 @@
 <p align="right">
-  🇺🇦 <a href="README.md">Ukrainian Version</a>
+  🇺🇦 <a href="./README.md">Ukrainian Version</a>
 </p>
 
 
