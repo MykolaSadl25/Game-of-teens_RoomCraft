@@ -1,54 +1,67 @@
 const room = document.getElementById("room-canvas");
 const items = document.querySelectorAll(".planner__item");
 
-// Handle dragging furniture from sidebar
+// Make palette items draggable and set drag data
 items.forEach((item) => {
+  item.setAttribute('draggable', 'true');
   item.addEventListener("dragstart", (e) => {
     e.dataTransfer.setData("text/plain", item.dataset.type);
   });
 });
 
-// Allow dropping into room
+// Allow drop inside the room
 room.addEventListener("dragover", (e) => {
   e.preventDefault();
 });
 
+// On drop, create new furniture image inside the room
 room.addEventListener("drop", (e) => {
   e.preventDefault();
+
   const type = e.dataTransfer.getData("text/plain");
+  if (!type) return;
 
   const img = document.createElement("img");
   img.src = `../img/${type}.webp`;
   img.alt = type;
   img.classList.add("furniture");
+
   img.style.position = "absolute";
 
-  // Calculate position relative to room
-  const roomRect = room.getBoundingClientRect();
-  const left = e.clientX - roomRect.left;
-  const top = e.clientY - roomRect.top;
-  img.style.left = `${left}px`;
-  img.style.top = `${top}px`;
+  // Position relative to container using offsetX/Y (good for drop)
+  img.style.left = `${e.offsetX}px`;
+  img.style.top = `${e.offsetY}px`;
+
+  // Disable native drag for the furniture image
+  img.setAttribute('draggable', 'false');
 
   makeDraggable(img);
+  enableRightClickDelete(img);
+
   room.appendChild(img);
 });
 
-// Allow dragging inside the room
 function makeDraggable(el) {
   el.addEventListener("mousedown", function (e) {
+    if (e.button !== 0) return; // Left click only
     e.preventDefault();
 
     const roomRect = room.getBoundingClientRect();
-    const shiftX = e.clientX - el.getBoundingClientRect().left;
-    const shiftY = e.clientY - el.getBoundingClientRect().top;
+    const elRect = el.getBoundingClientRect();
+
+    const shiftX = e.clientX - elRect.left;
+    const shiftY = e.clientY - elRect.top;
 
     function moveAt(clientX, clientY) {
-      const newX = clientX - roomRect.left - shiftX;
-      const newY = clientY - roomRect.top - shiftY;
+      const left = clientX - roomRect.left - shiftX;
+      const top = clientY - roomRect.top - shiftY;
 
-      el.style.left = `${newX}px`;
-      el.style.top = `${newY}px`;
+      // Optional: clamp to stay inside the room boundaries
+      const maxLeft = room.clientWidth - el.offsetWidth;
+      const maxTop = room.clientHeight - el.offsetHeight;
+
+      el.style.left = Math.min(Math.max(0, left), maxLeft) + "px";
+      el.style.top = Math.min(Math.max(0, top), maxTop) + "px";
     }
 
     function onMouseMove(e) {
@@ -59,13 +72,20 @@ function makeDraggable(el) {
 
     document.addEventListener(
       "mouseup",
-      function () {
+      () => {
         document.removeEventListener("mousemove", onMouseMove);
       },
       { once: true }
     );
   });
 
-  // Prevent image from being draggable by browser
+  // Prevent default dragstart native behavior
   el.ondragstart = () => false;
+}
+
+function enableRightClickDelete(el) {
+  el.addEventListener("contextmenu", (e) => {
+    e.preventDefault(); // Prevent default menu
+    el.remove(); // Delete element on right click
+  });
 }

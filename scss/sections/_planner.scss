@@ -1,3 +1,12 @@
+
+#room-canvas {
+  position: relative;
+  width: 800px; /* or whatever */
+  height: 600px; /* or whatever */
+  /* overflow: visible; */
+  border: 1px solid #ccc; /* just for visual */
+}
+
 .planner {
   padding: 40px 0;
 
@@ -100,16 +109,36 @@
     fill: currentColor;
   }
 
-  &__room {
-    flex: 3 1 600px;
-    height: 600px;
-    background-color: #f0f0f0;
-    border: 2px dashed #aaa;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-  }
+ 
+    // flex: 3 1 600px;
+    // height: 600px;
+    // background-color: #f0f0f0;
+    // border: 2px dashed #aaa;
+    // border-radius: 12px;
+    // position: relative;
+    // overflow: hidden;
+      &__room {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 2px;
+  width: 100%;
+  height: 600px;
+  background-color: #f0f0f0;
+  border: 2px dashed #aaa;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+
+  // Візуальні лінії сітки
+  background-image: 
+    linear-gradient(to right, #ccc 1px, transparent 1px),
+    linear-gradient(to bottom, #ccc 1px, transparent 1px);
+  background-size: calc(100% / 6) calc(100% / 6);
 }
+
+  }
+
 
 .furniture {
   position: absolute;
