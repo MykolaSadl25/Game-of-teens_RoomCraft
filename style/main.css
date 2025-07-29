@@ -314,7 +314,7 @@ body {
 .hero-contact {
   padding: 6rem 0;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-bcg.webp);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./img/hero-bcg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -415,7 +415,7 @@ body {
 
 .about {
   padding: 200px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/about-bcg.webp");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./img/about-bcg.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
