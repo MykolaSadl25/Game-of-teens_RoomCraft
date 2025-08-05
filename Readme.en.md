@@ -6,7 +6,19 @@
 # 🛋️ RoomCraft – Game of Teens
 
 **RoomCraft** is a web project created as part of the **Game of Teens 2025** initiative. It is a stylish and responsive website that allows users to plan the interior of a room in an interactive format.
-The project was created by Mykola Sadliy.
+The project was created by Mykola Sadlii.
+
+## 🥁 Results
+
+🎉 **RoomCraft** took **5th place** among **12 participants** in the **Frontend** direction at the **Game of Teens 2025** hackathon!
+
+🚀 This was my **first hackathon** — and immediately got into the **top 5**!
+
+💻 It was difficult, but very interesting. I improved in HTML, CSS, JS, responsive layout and the ability to quickly solve problems under deadline pressure.
+
+🔥 This experience gave me even more motivation to develop further.
+
+👉 Ahead — even cooler projects!
 
 ---
 
